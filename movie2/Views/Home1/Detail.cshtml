@@ -1,0 +1,32 @@
+﻿@model movie2.Models.DashBoard
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<table>
+    <tr>
+        <td><span>Movie_name</span></td>
+        <td>@Html.DisplayFor(x => x.Movie_name)</td>
+    </tr>
+    <tr>
+        <td><span>Date_Of_Release</span></td>
+        <td>@Html.DisplayFor(x => x.DateOFRelease)</td>
+    </tr>
+    <tr>
+        <td><span>Director</span></td>
+        <td>@Html.DisplayFor(x => x.Director)</td>
+    </tr>
+    <tr>
+        <td><span>About</span></td>
+        <td>@Html.DisplayFor(x => x.About)</td>
+    </tr>
+    <tr>
+        <td><span>Available</span></td>
+        <td>@Html.DisplayFor(x => x.IsAvailable)</td>
+    </tr>
+
+
+</table>

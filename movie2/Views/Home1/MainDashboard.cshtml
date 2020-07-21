@@ -1,0 +1,40 @@
+﻿@model IEnumerable<movie2.Models.DashBoard>
+
+@{
+    Layout = null;
+}
+<u><h1>Dashboard</h1></u>
+<br/>
+@Html.ActionLink("Back","Index","Home")
+<div class="table">
+    <table cellpadding="2" cellspacing="2" border="1">
+        <thead>
+            <tr>
+                
+                <th>Movie_name</th>
+                <th>DateOfRelease</th>
+                <th>Director</th>
+                <th>About</th>
+                <th>Availability</th>
+                <th>ProductionCompany_name</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in Model)
+            {
+                <tr>
+                    
+                    <td>@v.Movie_name</td>
+                    <td>@v.DateOFRelease</td>
+                    <td>@v.Director</td>
+                    <td>@v.About</td>
+                    <td>@v.IsAvailable</td>
+                    <td>@v.ProductionCompany_name</td>
+              
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

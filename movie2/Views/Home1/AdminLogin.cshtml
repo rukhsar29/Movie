@@ -1,0 +1,36 @@
+﻿@model movie2.Models.AdminLogin
+
+@{
+    Layout = null;
+}
+
+
+    <u><h1>AdminLogIn</h1></u>
+    @using (Html.BeginForm("AdminLogin", "Home1", FormMethod.Post))
+    {
+       
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.E_MailId)
+            @Html.TextBoxFor(x => x.E_MailId)
+        </div>
+
+        <br/>
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.Password)
+            @Html.TextBoxFor(x => x.Password)
+        </div>
+        <br/>
+
+        <div class="col-md-4">
+            @Html.CheckBoxFor(x => x.Policycheck1)Remember me
+        </div>
+
+        <div class="col-md-4">
+            <input type="submit" value="LogIn" />
+        </div>
+        <br/>
+        <p>@ViewBag.msg</p>
+
+    }
+
+

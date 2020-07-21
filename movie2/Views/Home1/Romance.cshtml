@@ -1,0 +1,39 @@
+﻿@model IEnumerable<movie2.Models.AddMovie>
+
+@{
+    Layout = null;
+}
+<u><h2>Romantic Movies</h2></u>
+<br />
+@Html.ActionLink("BackToHome", "Index", "Home")
+<br />
+<div class="table">
+    <table cellpadding="2" cellspacing="2" border="1">
+        <thead>
+            <tr>
+
+                <th>Movie_name</th>
+                <th>Director</th>
+                <th>About</th>
+                <th>DateOfRelease</th>
+                <th>IsAvailable</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var v in Model)
+            {
+                <tr>
+
+                    <td>@v.Movie_name</td>
+                    <td>@v.Director</td>
+                    <td>@v.About</td>
+                    <td>@v.DateOFRelease</td>
+                    <td>@v.IsAvailable</td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
